@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    
+    <script src="CalcScript.js" type="text/javascript"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Kalam:wght@300&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+    .title {
+        background-color:  #69306D;
+        display: flex;
+        justify-content: center;
+        padding: 8px;
+        margin: 30px;
+        font-family: 'Kalam', cursive;
+        font-size: 30px;
+        
+    }
+
+    #Calc{ background-color: #F2D7EE;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: solid 3px #000;
+        border-radius: 10px;
+
+    }
+
+    .button {
+    display: inline-block;
+    background-color: rgb(15, 12, 12);
+    justify-content: center; 
+    width:250px;
+    padding: 20px;
+    margin: 20px;
+    margin-left: 640px;
+    font-family: 'Kalam', cursive;
+    font-size: 22px;
+    color: #ffffff;
+    border: solid 3px whitesmoke; /* add this line */
+    border-radius: 10px; /* add this line */
+
+    }
+
+
+        body{background-color: #69306D;
+
+    }
+
+    .button:hover{
+        background-color: grey;
+    }
+
+    input[type=text], select {
+    width: 250px;
+    padding: 20px 10px;
+    padding-right: 200px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    display: inline-flex;
+    border: 2px solid #000;
+    border-radius: 10px;
+    justify-content: left;
+    font-family:'Kalam', cursive;
+    font-size: 20px;
+
+    }
+
+    .result{
+    display: inline-block;
+    background-color: rgb(15, 12, 12);
+    justify-content: center;
+    text-align:center; 
+    width:250px;
+    padding: 20px;
+    margin: 20px;
+    margin-left: 620px;
+    font-family: 'Kalam', cursive;
+    font-size: 22px;
+    color: #ffffff;
+    border: solid 3px whitesmoke; /* add this line */
+    border-radius: 10px; /* add this line */
+
+    }
+
+    .clear{
+    display: inline-block;
+    background-color: rgba(238, 238, 7, 0.681) ;
+    justify-content: center;
+    text-align:center; 
+    width:250px;
+    padding: 20px;
+    margin: 20px;
+    margin-left: 150px;
+    margin-bottom:100px;
+    font-family: 'Kalam', cursive;
+    font-size: 22px;
+    color: black;
+    border: solid 3px black; /* add this line */
+    border-radius: 10px; /* add this line */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    }
+    .clear:hover{
+    background-color: rgba(0, 128, 0, 0.708);
+    color: white;
+    }
+
+</style>
+    <div class="title">
+        <div id="Calc">  
+            Interest Calculator  
+        </div>
+         
+
+    </div>
+
+<body>
+        <input type="text" id="Principal" name="Principal" placeholder="Enter Principal"></input>
+        <input type="text" id="Rate" name="Rate" placeholder="Enter Rate"></input>
+        <input type="text" id="Time" name="Time" placeholder="Enter Time"></input><br></br>
+        <button class="button" onclick="CalculateInterest()">Calculate Interest</button><br></br>
+        <div class = "result"id="Calculate"></div>
+        <button class="clear" value="reset" onclick="document.getElementById('Principal').value ='', document.getElementById('Rate').value ='',document.getElementById('Time').value ='', document.getElementById('Calculate').innerHTML=''">Reset</button>
+
+    
+    
+</body>
+</html>
